@@ -72,9 +72,7 @@ img {
 
 .hero {
   /* border: 1px solid red; */
-
   margin: 0 auto;
-  margin-top: 5rem;
 
   display: flex;
   flex-direction: column;
@@ -87,6 +85,7 @@ img {
     no-repeat bottom;
   background-size: contain;
   padding-top: 3rem;
+  padding-bottom: 12rem;
 }
 
 .hero__title {
@@ -120,4 +119,117 @@ img {
     var(--accent-cyan-gradient) 0%,
     var(--accent-blue-gradient) 35%
   );
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 340px 340px;
+  justify-content: center;
+  gap: 5rem;
+  background-color: var(--primary-dark-blue-main);
+}
+
+.feature {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.feature__title {
+  font-family: var(--font-primary);
+}
+
+.feature__text {
+  font-family: var(--font-secondary);
+}
+
+.colaboration {
+  display: flex;
+  padding: 0 3rem;
+  padding-top: 8rem;
+  background-color: var(--primary-dark-blue-main);
+  gap: 4rem;
+  align-items: center;
+}
+
+.how_works {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.how_works__title {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
+.how_works__text {
+  font-family: var(--font-secondary);
+}
+
+.how_works__button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+
+  font-family: var(--font-secondary);
+  color: var(--accent-cyan-gradient);
+  border-bottom: 1px solid var(--accent-cyan-gradient);
+  margin-right: auto;
+  padding-bottom: 0.3rem;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  padding: 0 3rem;
+  padding-top: 8rem;
+  background-color: var(--primary-dark-blue-main);
+  gap: 3rem;
+}
+
+.testimonial {
+  position: relative;
+  background-color: var(--primary-dark-blue-testimonials);
+  padding: 2rem 1.5rem 1.5rem;
+  font-family: var(--font-secondary);
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  z-index: 20;
+}
+
+.testimonial--quote::after {
+  content: "";
+  display: block;
+  background: url(../images/bg-quotes.png) no-repeat top left;
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  width: 80px;
+  height: 50px;
+  z-index: 10;
+}
+
+.testimonial p {
+  width: 21rem;
+}
+
+.testimonial img {
+  border-radius: 50%;
+}
+
+.testimonial__profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.testimonial__profile h5 {
+  font-weight: var(--font-weight-regular);
 }
