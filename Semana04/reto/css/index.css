@@ -1,0 +1,47 @@
+/* importando fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+
+/* importando modulos de estilos de la página */
+@import "./modules/variables.css";
+@import "./modules/header.css";
+@import "./modules/hero.css";
+@import "./modules/curve.css";
+@import "./modules/colaboration.css";
+@import "./modules/access.css";
+@import "./modules/footer.css";
+
+/* reseteo de página */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+body {
+  background-color: var(--neutral-white);
+}
+
+img {
+  max-width: 100%;
+  /* height: auto; */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrapper {
+  width: min(100% - 10rem, 1440px);
+  margin: 0 auto;
+}
+
+@media (max-width: 375px) {
+  .wrapper {
+    width: min(100% - 4rem, 375px);
+  }
+}

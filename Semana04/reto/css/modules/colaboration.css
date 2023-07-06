@@ -1,0 +1,139 @@
+.colaboration {
+  font-family: var(--font-secondary);
+  background-color: var(--neutral-light-grayish-blue);
+  margin-top: -1rem !important;
+  padding-bottom: 5rem;
+}
+
+.colaboration__container {
+  padding-top: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 375px) {
+  .colaboration__container {
+    flex-direction: column-reverse;
+    gap: 4rem;
+  }
+}
+
+.colaboration__description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (max-width: 375px) {
+  .colaboration__description {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+.colaboration__title {
+  font-size: 1.8rem;
+  font-weight: var(--font-weight-bold);
+}
+
+@media (max-width: 375px) {
+  .colaboration__title {
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+  }
+}
+
+.colaboration__paragraph {
+  font-size: 0.8rem;
+  padding-right: 5rem;
+}
+
+@media (max-width: 375px) {
+  .colaboration__paragraph {
+    font-size: 0.9rem;
+    padding: 0;
+    line-height: 23px;
+  }
+}
+
+.colaboration__link {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--accent-moderate-cyan);
+  border-bottom: 1px solid var(--accent-moderate-cyan);
+  margin-right: auto;
+  padding-bottom: 0.2rem;
+}
+
+@media (max-width: 375px) {
+  .colaboration__link {
+    margin-right: 0;
+  }
+}
+
+.colaboration__testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  min-width: 23rem;
+  width: 60%;
+  background-color: var(--neutral-white);
+  padding: 2rem 1.5rem 1.5rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 375px) {
+  .colaboration__testimonial {
+    min-width: 19rem;
+  }
+}
+
+.colaboration__testimonial p {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  line-height: 22px;
+}
+
+@media (max-width: 375px) {
+  .colaboration__testimonial p {
+    font-size: 0.8rem;
+    letter-spacing: 0;
+    line-height: 25px;
+  }
+}
+
+.colaboration img {
+  border-radius: 50%;
+}
+
+.testimonial_profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.testimonial_profile h4 {
+  font-weight: var(--font-weight-bold);
+  font-size: 0.7rem;
+}
+
+@media (max-width: 375px) {
+  .testimonial_profile h4 {
+    font-family: var(--font-secondary);
+    font-size: 0.6rem;
+  }
+}
+
+.testimonial_profile h5 {
+  font-weight: var(--font-weight-regular);
+  font-size: 0.6rem;
+}
+
+@media (max-width: 375px) {
+  .testimonial_profile h5 {
+    font-size: 0.5rem;
+  }
+}
