@@ -1,0 +1,214 @@
+.skills {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+
+    &__info {
+        padding: 3rem 4rem;
+        display: flex;
+        flex-direction: column;
+
+        .skills__greeting {
+            font-size: 1.6rem;
+            color: $color-secondary;
+            background-color: #434345;
+            border: none;
+            border-radius: 3rem;
+            padding: .8rem 1.9rem;
+            margin-bottom: 2rem;
+            margin-right: auto;
+        }
+
+        .skills__caption {
+            font-size: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .skills__description {
+            font-size: 1.5rem;
+            text-align: justify;
+            line-height: 2.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .skills__icons {
+            display: flex;
+            gap: 1.5rem;
+            margin-right: 1rem;
+
+            .skills__icon {
+                width: 3rem;
+                height: 3rem;
+                padding-top: .3rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                border-radius: .5rem;
+                background-color: $color-tertiary;
+
+                svg {
+                    width: 2.7rem;
+                    height: 2.7rem;
+                    fill: $color-font;
+                    padding-right: .1rem;
+                }
+
+            }
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(5, 5rem);
+        grid-template-rows: repeat(5, 5rem);
+        grid-template-areas:
+            "s15 . . . ."
+            "s13 s14 . . ."
+            "s10 s11 s12 . ."
+            "s6 s7 s8 s9 ."
+            "s1 s2 s3 s4 s5";
+        gap: 1rem;
+        padding: 24px;
+    }
+
+    &__box {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 0.625rem;
+        background: #393646;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__box svg {
+        width: 50px;
+        height: 50px;
+        fill: $color-font;
+    }
+
+    &__box:nth-child(1) {
+        grid-area: s1;
+    }
+
+    &__box:nth-child(1) svg:hover {
+        fill: #e34f26;
+    }
+
+    &__box:nth-child(2) {
+        grid-area: s2;
+    }
+
+    &__box:nth-child(2) svg:hover {
+        fill: #0099e5;
+    }
+
+    &__box:nth-child(3) {
+        grid-area: s3;
+    }
+
+    &__box:nth-child(3) svg:hover {
+        fill: #fd5c63;
+    }
+
+    &__box:nth-child(4) {
+        grid-area: s4;
+    }
+
+    &__box:nth-child(4) svg:hover {
+        fill: #b84592;
+    }
+
+    &__box:nth-child(5) {
+        grid-area: s5;
+    }
+
+    &__box:nth-child(5) svg:hover {
+        fill: #333;
+    }
+
+    &__box:nth-child(6) {
+        grid-area: s6;
+    }
+
+    &__box:nth-child(6) svg:hover {
+        fill: #f7df1e;
+    }
+
+    &__box:nth-child(7) {
+        grid-area: s7;
+    }
+
+    &__box:nth-child(7) svg:hover {
+        fill: #00d8ff;
+    }
+
+    &__box:nth-child(8) {
+        grid-area: s8;
+    }
+
+    &__box:nth-child(8) svg:hover {
+        fill: #49a942;
+    }
+
+    &__box:nth-child(9) {
+        grid-area: s9;
+    }
+
+    &__box:nth-child(9) svg:hover {
+        fill: #35495e;
+    }
+
+    &__box:nth-child(10) {
+        grid-area: s10;
+    }
+
+    &__box:nth-child(10) svg:hover {
+        fill: #ffc845;
+    }
+
+    &__box:nth-child(11) {
+        grid-area: s11;
+    }
+
+    &__box:nth-child(11) svg:hover {
+        fill: #4298b5;
+    }
+
+    &__box:nth-child(12) {
+        grid-area: s12;
+    }
+
+    &__box:nth-child(12) svg:hover {
+        fill: #589636;
+    }
+
+    &__box:nth-child(13) {
+        grid-area: s13;
+    }
+
+    &__box:nth-child(13) svg:hover {
+        fill: #7552cc;
+    }
+
+    &__box:nth-child(14) {
+        grid-area: s14;
+    }
+
+    &__box:nth-child(14) svg:hover {
+        fill: #0db7ed;
+    }
+
+    &__box:nth-child(15) {
+        grid-area: s15;
+    }
+
+    &__box:nth-child(15) svg:hover {
+        fill: #ff9900;
+    }
+}

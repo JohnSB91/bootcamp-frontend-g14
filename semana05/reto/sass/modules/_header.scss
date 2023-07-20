@@ -1,0 +1,77 @@
+header {
+    /* fijar header */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background-image: $gradient-primary;
+    z-index: 1;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 5rem;
+        padding: 0 1.5rem;
+
+        &__logo {
+            height: 90%;
+            width: 8%;
+            cursor: pointer;
+        }
+
+        &__logo:hover {
+            height: 100%;
+        }
+
+        &__menu ul {
+            list-style: none;
+            display: flex;
+            gap: 3rem;
+            padding: 1rem;
+            margin: 1rem;
+        }
+
+        &__menu a {
+            font-size: 1.5rem;
+            font-weight: $font-weight-bold;
+            text-transform: capitalize;
+            transition: color ease .3s;
+        }
+
+        &__menu a:hover {
+            color: $color-secondary;
+            border-bottom: 3px solid $color-secondary;
+            padding-bottom: .3rem;
+        }
+
+        &__rrss {
+            display: flex;
+            gap: 1.5rem;
+            padding-right: .8rem;
+
+            .rrss__icon {
+                width: 3.5rem;
+                height: 3.5rem;
+                padding-top: .3rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                border-radius: 50%;
+                background-color: transparent;
+
+                svg {
+                    fill: $color-font;
+                }
+            }
+
+            .rrss__icon:hover {
+                border-radius: 100%;
+                background-color: $color-tertiary;
+            }
+        }
+
+    }
+}

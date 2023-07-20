@@ -1,0 +1,58 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #2b2b2b;
+
+    &__capa {
+        background-color: $color-tertiary;
+        height: 3rem;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__logo {
+        height: 5rem;
+        cursor: pointer;
+        margin: 5rem 2rem 0;
+    }
+
+    &__copyright {
+        font-family: $font-secondary;
+        font-size: 1.8rem;
+        color: #fffcf2;
+        margin-bottom: 2rem;
+
+        span {
+            font-weight: $font-weight-bold;
+        }
+    }
+
+    &__frameworks {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+    &__framework {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 0.625rem;
+        background: #393646;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            width: 3.2rem;
+            height: 3.2rem;
+            fill: $color-font;
+        }
+    }
+
+}
