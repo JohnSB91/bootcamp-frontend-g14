@@ -7,29 +7,38 @@
   <title>Listado de paises con Javascript y el API fetch</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
+<body id="top">
   <header class="app__header wrapper">
     <h1>Listado de paises con Javascript y el API fetch</h1>
   </header>
 
   <section class="app__filters wrapper">
-    <input class="app__search" placeholder="Buscar por nombre de país o su capital..." />
+    <input type="search" class="app__search" placeholder="Buscar por nombre de país o su capital..." />
 
     <select class="app__filter">
       <option value="">Filtrar por región</option>
       <option value="africa">Africa</option>
       <option value="americas">Americas</option>
       <option value="asia">Asia</option>
-      <option value="europa">Europa</option>
+      <option value="europe">Europe</option>
       <option value="oceania">Oceania</option>
     </select>
   </section>
 
   <main class="app__list wrapper"></main>
 
+  <div class="app_scrolltop">
+    <a href="#top">🔼</a>
+  </div>
+
   <footer class="app__footer wrapper">
     Hecho por Victor Villazón - Julio 2023
   </footer>
+
+  <dialog class="app__dialog">
+    <div class="dialog__body"></div>
+    <button class="dialog__close">Close</button>
+  </dialog>
 
   <script src="./modules/main.js" type="module"></script>
 </body>

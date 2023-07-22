@@ -3,6 +3,8 @@ import { fetchCountries } from './services.js'
 import { renderCountries } from './utils.js'
 
 const searchInput = document.querySelector('.app__search')
+const filterSelect = document.querySelector('.app__filter')
+const scrollTopButton = document.querySelector('.app_scrolltop')
 
 let countryData = []
 
@@ -24,6 +26,32 @@ searchInput.addEventListener('input', (event) => {
   renderCountries(filteredCountries)
 })
 
+filterSelect.addEventListener('input', (event) => {
+  const value = event.target.value
+
+  console.log(value)
+
+  const filteredCountriesByRegion = countryData.filter(country => {
+    const loweredRegion = country.region.toLowerCase()
+    const loweredValue = value.toLowerCase()
+
+    return loweredRegion.includes(loweredValue)
+  })
+
+  renderCountries(filteredCountriesByRegion)
+})
+
+document.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    // console.log('Scrolling....', window.scrollY)
+    scrollTopButton.style.visibility = 'visible'
+    scrollTopButton.style.opacity = 1
+  } else {
+    scrollTopButton.style.visibility = 'hidden'
+    scrollTopButton.style.opacity = 0
+  }
+})
+
 document.addEventListener('DOMContentLoaded', async () => {
   // console.log('EL DOM se cargo totalmente')
 
@@ -35,4 +63,58 @@ document.addEventListener('DOMContentLoaded', async () => {
   countryData = data
 
   renderCountries(data)
+
+  scrollTopButton.style.visibility = 'hidden'
+  scrollTopButton.style.opacity = 0
+
+  const countryMoreInfoButtons = document.querySelectorAll('.country__moreinfo')
+  const dialog = document.querySelector('.app__dialog')
+  const dialogBody = document.querySelector('.dialog__body')
+  const dialogClose = document.querySelector('.dialog__close')
+
+  countryMoreInfoButtons.forEach(moreInfoButton => {
+    moreInfoButton.addEventListener('click', (event) => {
+      // console.log(event)
+      const { countryName } = event.target.dataset
+      // console.log(valueData)
+
+      const countryFound = countryData.find(
+        country => country.name.common === countryName
+      )
+
+      // console.log(countryFound)
+      
+      const {
+        flags: { svg },
+        name: { official },
+        languages,
+        capital,
+        currencies,
+        timezones
+      } = countryFound
+
+      // console.log(svg, official)
+
+      const parsedLanguages = Object.values(languages).splice(0, 3)
+      const parsedCurrencies = Object
+        .values(currencies)
+        .map(currency => `${currency.name} (${currency.symbol})`)
+        .join(', ')
+
+      dialogBody.innerHTML = `
+        <img src="${svg}" width="400" height="200" />
+        <h2>${official}</h2>
+        <p><strong>Language(s):</strong> ${parsedLanguages}</p>
+        <p><strong>Capital:</strong> ${capital}</p>
+        <p><strong>Currencies(s):</strong> ${parsedCurrencies}</p>
+        <p><strong>Timezone(s):</strong> ${timezones}</p>
+      `
+
+      dialog.showModal()
+    })
+  });
+
+  dialogClose.addEventListener('click', (event) => {
+    dialog.close()
+  })
 })
