@@ -33,12 +33,12 @@
   ],
   "movies": [
     {
-      "id": 1,
       "name": "Barbie",
       "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
       "release": "2023-07-21",
       "genreId": 1,
-      "resumen": "Resumen de prueba"
+      "resumen": "Resumen de prueba",
+      "id": 1
     },
     {
       "id": 2,

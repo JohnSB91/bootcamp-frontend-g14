@@ -1,7 +1,7 @@
 {
   "name": "dia03-javascript-es6-fetch-crud",
   "version": "1.0.0",
-  "description": "",
+  "description": "* [x] Crear un nuevo proyecto con npm ( npm init )\r * [x] Instalar json-server usando npm (npm install json-server)\r * [x] Ignorar el directorio node_modules del repositorio usando git\r * [x] Crear una base de datos local en el archivo db.json\r * [x] Listar las peliculas en una tabla\r * [x] Usando un formulario crear una nueva pelicula \r * [x] En el listado de películas permitir eliminar una película\r * [x] Usando el mismo formulario Permitir que el usuario pueda editar y guardar unan pelicula existente",
   "main": "index.js",
   "scripts": {
     "dev": "json-server --watch db.json"
